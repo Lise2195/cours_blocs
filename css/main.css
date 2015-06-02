@@ -1,16 +1,18 @@
 /* CSS Reset + définition des polices et des paramètres principaux qui apparaissent partout*/
 body {
-  background-color: #f0f0f0;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* couleur de fond du document (gris) */
   font-family: arial;
   color:black;
-  width: 960px;
+  width: 960px; /* largeur du contenu */
+  /* marges auto pour centrer le contenu */
   margin: auto;
 }
 /* Pour mettre en gras la page active, selon le li du menu qui a cette id dans chaque page */
 #active a{
   font-weight: bold;
 }
-/* pour avoir une image responsive */
+/* pour avoir une image qui fait l'entier de l'élément parent */
 img {
   width: 100%;
 }
@@ -36,13 +38,13 @@ h1, h2, h3, h4, h5, h6 {
 p, strong {
   font-weight: bold;
   margin: 0px;
-  padding-top: 25px; /* selon maquette - l'interligne (ligne 38) */
+  padding-top: 25px; /* selon maquette - l'interligne */
   line-height: 20px;
   font-size: 15px;
 }
 strong {
   font-style: italic;
-  display:block; /* pour retour à ligne sinon l'espacement de la ligne 39 ne marchera pas */
+  display:block; /* pour retour à ligne sinon l'espacement ne marchera pas */
 }
 
 /* CSS reset des liens bleu et soulignés parce que ça se fait plus */
@@ -51,13 +53,12 @@ a {
   color: black;
 }
 a:hover {
-  color: grey;
+  color: grey; /* lorsque le menu est survolé avec la souris */
 }
 header {
   text-align:right; /* pour l'alignement du menu*/
   padding: 0px;
-  margin: 65px 0 105px 0; /* pour les marges en haut et en bas de l'élément header selon maquette *
-*/
+  margin: 65px 0 105px 0; /* pour les marges en haut et en bas de l'élément header selon maquette */
 }
 footer {
   bottom: 0px;
@@ -71,10 +72,9 @@ footer p {
   font-size: 10pt;
   font-weight: normal;
 }
-/* alignement de nav à droite */
 nav li {
   font-size: 10pt;
-  display: inline;
+  display: inline; /* alignement de façon linéaire plutôt que avec des retour à la ligne */
   padding-left: 30px;
 }
 nav ul {
@@ -83,24 +83,22 @@ nav ul {
 img {
   margin-top: 50px;
 }
-
 label, input {
   display: inline-block; /* permet d'avoir les labels et champs de textes
-   qui forcent le retour à la ligne, et sont redimensionnables (ligne 106) et sont affiché à la suite  */
+   qui forcent le retour à la ligne, et sont redimensionnables et sont affiché à la suite  */
 }
-
-label {
+/* on exclut les boutons radios, car ils n'ont pas la même stylisation (selecteur:not() signifie l'exclusion de l'élément mis entre parenthèses */ 
+label:not(.labelradio) {
   font-weight: bold; /* texte en gras */
   font-size: 25px;
   margin-right: 23px; /* pour ne pas coller ça au boites, raison esthétique */
   width: 105px;
-  text-align: right;
+  text-align: right; /* pour aligner les label à droite */
 }
 
 textarea {
   vertical-align: top; /* pour aligner le label "message" en haut */
 }
-
 /* stylisation des boites de textes (pas de bordures disgrâcieuses, taille  quand on tape du texte dedans */
 input[type="text"], textarea {
   padding: 6px;
@@ -108,7 +106,7 @@ input[type="text"], textarea {
   font-size:16pt;
   width: 380px; /* on définit la largeur des boîtes */
   border: 0px solid; /* pour être cohérent avec la maquette */
-  height: 40px;
+  height: 40px; /* on définit la hauteur des boîtes */
 }
 input[type="radio"] {
   margin-right: 36px; /* selon maquette */
@@ -121,22 +119,23 @@ textarea {
   height: 180px; /* on agrandit un peu la boite pour correspondre à la maquette */
 }
 input[type="submit"] {
-  float:right;
+  float:right; /* pour aligner le bouton envoyer à droit du formulaire (selon la div parent .contactform) */
   font-size: 16pt;
   font-weight: bold;
-  border: none;
   /* on annule l'aspect "bouton" pour seulement du texte */
+  border: none;
   background-color: transparent; 
   padding: 0;
   font-style: italic;
   text-decoration: underline;
   color: black; 
 }
-/* pour que le logo se "colle" à gauche" */
+/* classes */
 .logo {
   padding: 0px; /* on évite de mettre un padding sur le logo */
   font-size: 20px;
-  float: left;
+  float: left; /* pour que le logo se "colle" à gauche" */
+
 }
 /* pour centrer le formulaire ainsi que définir sa taille (selon maquette) */
 .contactform {
@@ -148,8 +147,11 @@ input[type="submit"] {
 }
 .headline {
   margin: 0px; /* on reset le css annoncé sur body (margin-auto) */
-  padding-bottom: 40px; /* selon maquette - margin de l'image (ligne 73) */
+  padding-bottom: 40px; /* selon maquette - margin de l'image  */
 }
 #scrolltop {
-  float: left;
+  float: left; /* pour aligner le bouton "retour en haut" à gauche du footer */
+}
+.labelradio {
+  font-weight: bold;
 }

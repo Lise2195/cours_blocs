@@ -28,23 +28,24 @@
   <!-- Formulaire -->
   <form method="post" action="unscript.php">
     <div class="contactform">
+      <!-- pour quand même donner un espace au formulaire à gauche, sinon les boutons radio ne seront pas bien alignés -->
       <label></label>
 	  <!-- les codes pour le formulaire-->
-      <b>Madame</b>
-      <input type="radio" name="sexe" value="f">
-      <b>Monsieur</b>
-      <input type="radio" name="sexe" value="m">
+      <label for="f" class="labelradio">Madame</label>
+      <input type="radio" name="sexe" value="f" id="f" required>
+      <label for="m" class="labelradio">Monsieur</label>
+      <input type="radio" name="sexe" value="m" id="m" required>
       <br>
 	  <!-- Le for permet de lier (avec le même id) le label avec le champs.
 	  Comme ça quand on clique sur le label, le champ de texte s'active -->
       <label for="name">Nom</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" autofocus required>
       <br>
       <label for="firstname">Prénom</label>
-      <input type="text" name="firstname" id="firstname">
+      <input type="text" name="firstname" id="firstname" required>
       <br>
       <label for="message">Message</label>
-      <textarea name="message" id="message"></textarea>
+      <textarea name="message" id="message" required></textarea>
     <br>
 	<!-- bouton envoyer -->
     <input type="submit" name="submit" value="Envoyer">
