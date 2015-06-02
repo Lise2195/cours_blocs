@@ -6,6 +6,39 @@
     <title></title>
   </head>
   <body>
+      <form method="post" action="unscript.php">
+       <label>Sexe</label>
+
+   <input type="radio" name="sexe" value="m">Homme
+  
+   <input type="radio" name="sexe" value="f">Femme
+  
+  </br>
+  
+  <label>Nom </label>
+   <input type="text" name="username">
+  
+  </br>
+  
+  <label>Prénom  </label>
+   <input type="text" name="nickname">
+  
+  </br>
+  
+  <label>Message  </label>
+    <textarea maxlength="50"
+        minlength="10"
+        name="comments"
+        cols="23"
+        rows="6"
+        wrap="soft"></textarea>
+  
+  </br>
+  
+  <label>
+    <input type="submit" name="submit" value="Envoyer">
+  </label>
+  </form>
   </body>
 </html>
 

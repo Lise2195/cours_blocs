@@ -1,21 +1,47 @@
+/* CSS Reset + définition des polices et des paramètres principaux qui apparaissent partout*/
 body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   background-color: #f0f0f0;
+font-family: arial;
+  color:black;
 }
+/* on définit la largeur du site selon la maquette .psd */
+.site {
+ width: 960px;
+ margin: auto;
+}
+/* Pour mettre en gras la page active, selon le li du menu qui a cette id dans chaque page */
+#active a{
+font-weight: bold;
+}
+/* pour avoir une image responsive */
 img {
 width: 100%;
 }
+/* stylisation des titres en gras soulignés */
 h1 {
+    font-style: italic;
+    font-size: 60px; /* selon maquette */
+}
+h2 {
+    font-style: italic;
+    font-size: 40px; 
+}
+h3 {
+    font-size: 25px;
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
   font-weight: bold;
-  font-style: italic;
 }
-p, h1, h2, h3, h4, h5, h6, ul, ol {
-  font-family: arial;
-  color:black;
+p {
+    font-size: 15px;
 }
+
+/* CSS reset des liens bleu et soulignés parce que ça se fait plus */
 a {
   text-decoration: none;
   color: black;
@@ -24,34 +50,77 @@ a:hover {
   text-decoration: none;
   color: grey;
 }
-nav {
-  text-align:right;
-}
-nav li {
-  font-size: 10pt;
-  display: inline;
-  padding-left: 2%;
-}
-.content {
-  margin-left: 18.66%;
-  margin-right: 18.66%;
-
-}
 header {
-  padding: 3.2% 0 3.2% 0;
+text-align:right; /* pour l'alignement du menu*/
+ padding: 0px;
+    margin: 65px 0 80px 0; /* pour les marges en haut et en bas de l'élément header selon maquette *
+*/
 }
 footer {
   bottom: 0px;
   text-align: right;
   font-size: 10pt;
-  margin-bottom:4.8%;
+  margin-bottom:90px;
   border-top: 1px solid;
-  margin-top: 5%;
+  margin-top: 70px;
+}
+/* alignement de nav à droite */
+nav li {
+  font-size: 10pt;
+  display: inline;
+  padding-left: 30px;
+}
+nav ul {
+ padding: 0px;
+}
 
-}
+
+/* pour que le logo se "colle" à gauche" */
 .logo {
-  float: left;
+      padding: 0px; /* on évite de mettre un padding sur le logo */
+ font-size: 20px;
+    float: left;
 }
-p {
-  word-wrap: break-word;
+ label {
+     padding: 6px 0px 6px 0px; /* pour centrer verticalement les labels (nom, prénom, email etc...) avec les boites de textes à remplir */
+     font-weight: bold; /* texte en gras */
+     font-size: 16pt;
+     padding-right: 10px; /* pour ne pas coller ça au boites, raison esthétique */
+     text-align: right; /* pour éviter que les boites soient à l'autre bout */
+     font-family: arial;
+	width: 100px; /* on définit une largeur pour les labels */
+	float: left; /* !!!!!! Très important, afin de coller chaque label avec le précédent. Comme ça on aligne verticalement la fin des blocs, et on évite que ça soit tout décalé */
+}
+/* stylisation des boites de textes (pas de bordures disgrâcieuses, taille  quand on tape du texte dedans */
+input[type="text"], textarea {
+    font-size:16pt;
+    width: 380px;
+    border: 0px solid;
+    height: 40px; /* pour être cohérent avec la maquette */
+    margin-bottom: 20px; /* pour espacer les boites */
+}
+textarea {
+    height: 180px; /* on agrandit un peu la boite pour correspondre à la maquette */
+}
+input[type="submit"] {
+    float:right;
+    font-size: 16pt;
+    font-weight: bold;
+    border: none;
+    /* on annule l'aspect "bouton" pour seulement du texte */
+   background-color: transparent; 
+   padding: 0;
+    font-style: italic;
+   text-decoration: underline;
+   color: black; 
+}
+/* pour centrer le formulaire ainsi que définir sa taille (selon maquette) */
+.contactform {
+    width: 500px;
+ margin-left: auto;
+  margin-right: auto;
+}
+.headline {
+        margin-top: 40px; /* selon maquette */
+    margin-bottom: 90px; /* selon maquette */
 }

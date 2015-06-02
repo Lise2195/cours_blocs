@@ -3,68 +3,60 @@
   <head>
       <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="utf-8">
-    <title>Portfolio de John Doe</title>
+    <title>Portfolio de John Doe - Contact</title>
   </head>
   <body>
-      <div class="content">
+      <div class="site">
 <header>
-     <div class="logo">
-              <p>JOHN DOE</p>
-          </div>
-        <nav>
+      <nav>
           <ul>
+              <li class="logo">JOHN DOE</li>
           <li><a href="index.html">présentation</a></li>
           <li><a href="portfolio.html">portfolio</a></li>
-          <li><a href="contact">contact</a></li>
+          <li id="active"><a href="contact.html">contact</a></li>
           </ul>
         </nav>
 </header>
-      <h1>      
+     <div class="headline">
+
+      <h2>      
       Iberios inimi, tem quiam, con eius explis et<br> occae cone num ilit untiae nonsequatem nobit <br> provid ea dolupta.
-  </h1>
+  </h2>
+          </div>
+    <form method="post" action="unscript.php">
+        <div class="contactform">
+
+            <input type="radio" name="sexe" value="m">Monsieur
   
-  <label>Masculin
-   <input type="checkbox" name="Garcon" value="Sexe">
-  </label>
+            <input type="radio" name="sexe" value="f">Madame
   
-    <label>Féminin
-   <input type="checkbox" name="Fille" value="Sexe">
-  </label>
-  
-  </br>
-  
-  <label>Nom
+            </br>  
+  <label>Nom</label>
    <input type="text" name="username">
-  </label>
   
   </br>
   
-  <label>Prénom
+  <label>Prénom</label>
    <input type="text" name="nickname">
-  </label>
   
   </br>
   
-  <label>Message
-    <textarea maxlength="100"
+  <label>Message</label>
+    <textarea maxlength="50"
         minlength="10"
-        name="comments"
-        cols="20"
+        name="message"
+        cols="23"
         rows="6"
-        wrap="soft"></textarea>
-  </label>
+        ></textarea>
   
   </br>
   
-  <label>
+  <label></label>
     <input type="submit" name="submit" value="Envoyer">
-  </label>
-  
-  
-  
-  
+    </div>
+  </form>
   <footer>
-  <p>©Copyright 2015 - Crédits photos: unsplash.com<p>
+  <p>©Copyright 2015 Lise2195, minisonisan, Pixello - Crédits photos: unsplash.com<p>
 </footer>
   </div>
 </body>
