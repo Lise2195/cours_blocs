@@ -95,6 +95,9 @@ input[type="text"], textarea {
   border: 0px solid;
   height: 40px; /* pour être cohérent avec la maquette */
 }
+input[type="radio"] {
+  margin-right: 36px; /* selon maquette */
+}
 input, textarea {
   margin-bottom: 17px; /* pour espacer les boites */
 }
