@@ -9,7 +9,7 @@
   <header>
     <nav>
       <ul>
-        <li class="logo">JOHN DOE</li>
+        <li class="logo"><a href="index.html">JOHN DOE</a></li>
         <li><a href="index.html">présentation</a></li>
         <li><a href="portfolio.html">portfolio</a></li>
         <li id="active"><a href="contact.html">contact</a></li>
@@ -17,44 +17,39 @@
     </nav>
   </header>
   <div class="headline">
-
     <h2>      
       Iberios inimi, tem quiam, con eius explis et<br> occae cone num ilit untiae nonsequatem nobit <br> provid ea dolupta.
     </h2>
   </div>
   <form method="post" action="unscript.php">
     <div class="contactform">
-      <label></label>
-      <span>Madame</span>
-      <input type="radio" name="sexe" value="m">
-       <span>Monsieur<span> 
+      <label for="titre">Titre</label>
+      Madame
+      <input type="radio" name="sexe" value="m" id="titre">
+      Monsieur
       <input type="radio" name="sexe" value="f">
-
       <br>  
-      <label>Nom</label>
-      <input type="text" name="username">
+      <label for="name">Nom</label>
+      <input type="text" name="name" id="name" placeholder="Votre nom">
       <br>
-      <label>Prénom</label>
-      <input type="text" name="nickname">
+      <label for="firstname">Prénom</label>
+      <input type="text" name="firstname" id="firstname" placeholder="Votre prénom">
       <br>
-      <label>Message</label>
-      <textarea maxlength="50"
-      minlength="10"
+      <label for="message">Message</label>
+      <textarea
       name="message"
-      cols="23"
-      rows="6"
-      >
-    </textarea>
-      <br>
-      <label></label>
-      <input type="submit" name="submit" value="Envoyer">
-    </div>
-  </form>
-  <footer>
-    <p>
-      ©Copyright 2015 Lise2195, minisonisan, Pixello - Crédits photos: unsplash.com
-    </p>
-  </footer>
+      id="message"
+      placeholder="Bonjour,"
+      ></textarea>
+    <br>
+    <input type="submit" name="submit" value="Envoyer">
+  </div>
+</form>
+<footer>
+  <p>
+    ©Copyright 2015 Lise2195, minisonisan, Pixello - Crédits photos: unsplash.com
+  </p>
+</footer>
 </body>
 </html>
 

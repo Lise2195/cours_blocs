@@ -14,7 +14,7 @@ body {
 img {
   width: 100%;
 }
-/* stylisation des titres en gras soulignés */
+/* stylisation des titres */
 h1 {
   font-style: italic;
   font-size: 60px; /* selon maquette */
@@ -41,9 +41,8 @@ p, strong {
   font-size: 15px;
 }
 strong {
-  font-weight: normal;
   font-style: italic;
-    display:block; /* pour retour à ligne sinon l'espacement de la ligne 39 ne marchera pas */
+  display:block; /* pour retour à ligne sinon l'espacement de la ligne 39 ne marchera pas */
 }
 
 /* CSS reset des liens bleu et soulignés parce que ça se fait plus */
@@ -52,7 +51,6 @@ a {
   color: black;
 }
 a:hover {
-  text-decoration: none;
   color: grey;
 }
 header {
@@ -63,13 +61,12 @@ header {
 }
 footer {
   bottom: 0px;
-
   margin-bottom:95px;
   border-top: 1px solid;
   margin-top: 77px; /* selon maquette */
 }
 footer p {
-    padding-top: 17px;
+  padding-top: 17px;
   text-align: right;
   font-size: 10pt;
   font-weight: normal;
@@ -87,31 +84,31 @@ img {
   margin-top: 50px;
 }
 
-/* pour que le logo se "colle" à gauche" */
-.logo {
-  padding: 0px; /* on évite de mettre un padding sur le logo */
-  font-size: 20px;
-  float: left;
+label, input {
+  display: inline-block; /* permet d'avoir les labels et champs de textes
+   qui forcent le retour à la ligne, et sont redimensionnables (ligne 106) et sont affiché à la suite  */
 }
+
 label {
-  padding: 10px 0px; /* pour centrer verticalement les labels (nom, prénom, email etc...) avec les boites de textes à remplir */
   font-weight: bold; /* texte en gras */
   font-size: 25px;
-  margin-right: 20px; /* pour ne pas coller ça au boites, raison esthétique */
-  text-align: right; /* pour éviter que les boites soient à l'autre bout */
-  font-family: arial;
-  width: 110px; /* on définit une largeur pour les labels */
-  display: block;
-  float: left; /* !!!!!! Très important, afin de coller chaque label avec le précédent. Comme ça on aligne verticalement la fin des blocs, et on évite que ça soit tout décalé */
+  margin-right: 23px; /* pour ne pas coller ça au boites, raison esthétique */
+  width: 105px;
+  text-align: right;
 }
+
+textarea {
+  vertical-align: top; /* pour aligner le label "message" en haut */
+}
+
 /* stylisation des boites de textes (pas de bordures disgrâcieuses, taille  quand on tape du texte dedans */
 input[type="text"], textarea {
   padding: 6px;
   font-family: arial;
   font-size:16pt;
   width: 380px; /* on définit la largeur des boîtes */
-  border: 0px solid;
-  height: 40px; /* pour être cohérent avec la maquette */
+  border: 0px solid; /* pour être cohérent avec la maquette */
+  height: 40px;
 }
 input[type="radio"] {
   margin-right: 36px; /* selon maquette */
@@ -135,14 +132,21 @@ input[type="submit"] {
   text-decoration: underline;
   color: black; 
 }
+/* pour que le logo se "colle" à gauche" */
+.logo {
+  padding: 0px; /* on évite de mettre un padding sur le logo */
+  font-size: 20px;
+  float: left;
+}
 /* pour centrer le formulaire ainsi que définir sa taille (selon maquette) */
 .contactform {
-  width: 522px;
+  margin-top: 65px; /* selon maquette */
+  width: 526px;
+  /* marges auto pour centrer le formulaire */
   margin-left: auto;
   margin-right: auto;
 }
 .headline {
-  margin: 0px; /* on reset le css annoncé sur body (margin-auto)
-  padding-top: 40px; /* selon maquette */
+  margin: 0px; /* on reset le css annoncé sur body (margin-auto) */
   padding-bottom: 40px; /* selon maquette - margin de l'image (ligne 73) */
 }
