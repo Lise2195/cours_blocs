@@ -1,5 +1,5 @@
 # Cours blocs : Création d'un site web
-![Aperçu du site web](http://image.noelshack.com/fichiers/2015/23/1433697531-capture-d-ecran-2015-06-07-a-19-17-07.png)
+![Mockup](https://github.com/Pixello/cours_blocs/blob/master/img/apercumockup.jpg)
 
 Un exercice de site web exposant un portfolio, selon une maquette photoshop.
 
