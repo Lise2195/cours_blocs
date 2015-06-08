@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- intégration de la feuille de style -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- définition du jeu de caractères -->
   <meta charset="utf-8">
   <title>Portfolio de John Doe - Contact</title>
 </head>
@@ -10,42 +12,51 @@
     <nav>
       <ul>
         <li class="logo"><a href="index.html">JOHN DOE</a></li>
+		<!-- bouton pour le menu -->
         <li><a href="index.html">présentation</a></li>
         <li><a href="portfolio.html">portfolio</a></li>
         <li id="active"><a href="contact.html">contact</a></li>
       </ul>
     </nav>
   </header>
+  <!-- ligne d'accroche -->
   <div class="headline">
     <h2>      
       Iberios inimi, tem quiam, con eius explis et<br> occae cone num ilit untiae nonsequatem nobit <br> provid ea dolupta.
     </h2>
   </div>
+  <!-- Formulaire -->
   <form method="post" action="unscript.php">
     <div class="contactform">
-      <label for="titre">Titre</label>
-      Madame
-      <input type="radio" name="sexe" value="m" id="titre">
-      Monsieur
+      <label></label>
+	  <!-- les codes pour le formulaire-->
+      <b>Madame</b>
+      <input type="radio" name="sexe" value="m">
+      <b>Monsieur</b>
       <input type="radio" name="sexe" value="f">
-      <br>  
+      <br>
+	  <!-- Le for permet de lier (avec le même id) le label avec le champs.
+	  Comme ça quand on clique sur le label, le champ de texte s'active -->
       <label for="name">Nom</label>
-      <input type="text" name="name" id="name" placeholder="Votre nom">
+      <input type="text" name="name" id="name">
       <br>
       <label for="firstname">Prénom</label>
-      <input type="text" name="firstname" id="firstname" placeholder="Votre prénom">
+      <input type="text" name="firstname" id="firstname">
       <br>
       <label for="message">Message</label>
-      <textarea
-      name="message"
-      id="message"
-      placeholder="Bonjour,"
-      ></textarea>
+      <textarea name="message" id="message"></textarea>
     <br>
+	<!-- bouton envoyer -->
     <input type="submit" name="submit" value="Envoyer">
   </div>
 </form>
 <footer>
+  <!-- Bouton de retour en haut -->
+  <a href="#">
+	<p id="scrolltop">
+   Retour en haut
+	</p>
+   </a>
   <p>
     ©Copyright 2015 Lise2195, minisonisan, Pixello - Crédits photos: unsplash.com
   </p>

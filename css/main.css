@@ -150,3 +150,6 @@ input[type="submit"] {
   margin: 0px; /* on reset le css annoncé sur body (margin-auto) */
   padding-bottom: 40px; /* selon maquette - margin de l'image (ligne 73) */
 }
+#scrolltop {
+  float: left;
+}
